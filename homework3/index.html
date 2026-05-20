@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Operations</title>
+
+    <style>
+
+        .box {
+            width: 70px;
+            height: 30px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .row {
+            margin-top: 15px;
+        }
+
+        .result {
+            display: inline-block;
+            width: 120px;
+            height: 30px;
+            border: 1px solid black;
+            margin-left: 10px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        button {
+            width: 90px;
+            height: 35px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Inputs -->
+    <input type="text" id="num1" class="box" placeholder="Number 1">
+
+    <input type="text" id="num2" class="box" placeholder="Number 2">
+
+    <input type="text" id="num3" class="box" placeholder="Number 3">
+
+    <!-- ADD -->
+    <div class="row">
+        <button onclick="add()">ADD</button>
+        <div id="addResult" class="result"></div>
+    </div>
+
+    <!-- MULTIPLY -->
+    <div class="row">
+        <button onclick="multiply()">MULTIPLY</button>
+        <div id="mulResult" class="result"></div>
+    </div>
+
+    <!-- MAX -->
+    <div class="row">
+        <button onclick="maxNum()">MAX</button>
+        <div id="maxResult" class="result"></div>
+    </div>
+
+    <!-- AVERAGE -->
+    <div class="row">
+        <button onclick="average()">AVERAGE</button>
+        <div id="avgResult" class="result"></div>
+    </div>
+
+    <script>
+
+        // ADD
+        function add() {
+
+            var a = parseFloat(document.getElementById("num1").value);
+            var b = parseFloat(document.getElementById("num2").value);
+            var c = parseFloat(document.getElementById("num3").value);
+
+            var result = a + b + c;
+
+            document.getElementById("addResult").innerHTML = result;
+        }
+
+        // MULTIPLY
+        function multiply() {
+
+            var a = parseFloat(document.getElementById("num1").value);
+            var b = parseFloat(document.getElementById("num2").value);
+            var c = parseFloat(document.getElementById("num3").value);
+
+            var result = a * b * c;
+
+            document.getElementById("mulResult").innerHTML = result;
+        }
+
+        // MAX
+        function maxNum() {
+
+            var a = parseFloat(document.getElementById("num1").value);
+            var b = parseFloat(document.getElementById("num2").value);
+            var c = parseFloat(document.getElementById("num3").value);
+
+            var result = Math.max(a, b, c);
+
+            document.getElementById("maxResult").innerHTML = result;
+        }
+
+        // AVERAGE
+        function average() {
+
+            var a = parseFloat(document.getElementById("num1").value);
+            var b = parseFloat(document.getElementById("num2").value);
+            var c = parseFloat(document.getElementById("num3").value);
+
+            var result = (a + b + c) / 3;
+
+            document.getElementById("avgResult").innerHTML = result;
+        }
+
+    </script>
+
+</body>
+
+</html>
